@@ -776,6 +776,396 @@ section {
     width: 30px;
 }
 
+/* Passion Section */
+.passion {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.passion-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.passion-card {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.passion-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(79, 70, 229, 0.05) 0%, transparent 70%);
+    animation: rotate 15s linear infinite;
+}
+
+.passion-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, #4f46e5, #06b6d4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.passion-text {
+    position: relative;
+    z-index: 2;
+}
+
+.passion-text h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(45deg, #4f46e5, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.passion-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.passion-stats {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.stat-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(45deg, #4f46e5, #06b6d4);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+
+.stat-badge:hover {
+    transform: translateY(-2px);
+}
+
+.cricket-animation {
+    position: relative;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.cricket-field {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    border-radius: 20px;
+    opacity: 0.3;
+}
+
+.field-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    border: 3px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: fieldRotate 10s linear infinite;
+}
+
+.pitch {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 20px;
+    background: rgba(139, 69, 19, 0.6);
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+.cricket-bat {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    width: 6px;
+    height: 60px;
+    background: linear-gradient(to bottom, #8b4513, #a0522d);
+    border-radius: 3px;
+    transform-origin: bottom center;
+    animation: batSwing 4s ease-in-out infinite;
+}
+
+.cricket-bat::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: -5px;
+    width: 16px;
+    height: 10px;
+    background: #8b4513;
+    border-radius: 8px;
+}
+
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.floating-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(79, 70, 229, 0.6);
+    border-radius: 50%;
+    animation: floatDot 3s ease-in-out infinite;
+    animation-delay: var(--delay);
+    left: var(--x);
+    top: var(--y);
+}
+
+.funny-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.bouncing-emoji {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 2rem;
+    animation: bounceEmoji 2s ease-in-out infinite;
+}
+
+.spinning-emoji {
+    position: absolute;
+    top: 20%;
+    right: 15%;
+    font-size: 1.8rem;
+    animation: spinEmoji 3s linear infinite;
+}
+
+.wobbling-emoji {
+    position: absolute;
+    bottom: 30%;
+    left: 20%;
+    font-size: 1.5rem;
+    animation: wobbleEmoji 2.5s ease-in-out infinite;
+}
+
+.dancing-emoji {
+    position: absolute;
+    bottom: 15%;
+    right: 25%;
+    font-size: 2.2rem;
+    animation: danceEmoji 4s ease-in-out infinite;
+}
+
+.cricket-ball {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #dc2626, #b91c1c);
+    border-radius: 50%;
+    position: relative;
+    animation: cricketBounce 3s ease-in-out infinite;
+    box-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
+}
+
+.cricket-ball::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: white;
+    transform: translateY(-50%);
+}
+
+.cricket-ball::after {
+    content: '';
+    position: absolute;
+    top: 30%;
+    bottom: 30%;
+    left: 50%;
+    width: 2px;
+    background: white;
+    transform: translateX(-50%);
+}
+
+.cricket-stumps {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    display: flex;
+    gap: 5px;
+    animation: stumpsShake 3s ease-in-out infinite;
+}
+
+.stump {
+    width: 8px;
+    height: 80px;
+    background: linear-gradient(to bottom, #8b5cf6, #7c3aed);
+    border-radius: 4px 4px 0 0;
+    position: relative;
+}
+
+.stump::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -2px;
+    right: -2px;
+    height: 5px;
+    background: #8b5cf6;
+    border-radius: 2px;
+}
+
+/* Volunteering Section */
+.volunteering {
+    background: white;
+}
+
+.volunteering-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.volunteering-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    padding: 3rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.volunteering-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+.volunteering-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(79, 70, 229, 0.2);
+}
+
+.volunteering-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.volunteering-content {
+    position: relative;
+    z-index: 2;
+}
+
+.volunteering-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.volunteering-content h4 {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.volunteering-points ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.volunteering-points li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.volunteering-points li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #4ade80;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.volunteering-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.volunteering-skills .skill-tag {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
 /* Contact Section */
 .contact {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -1015,6 +1405,125 @@ section {
     }
 }
 
+@keyframes cricketBounce {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-30px) rotate(90deg);
+    }
+    50% {
+        transform: translateY(-50px) rotate(180deg);
+    }
+    75% {
+        transform: translateY(-30px) rotate(270deg);
+    }
+}
+
+@keyframes stumpsShake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-2px);
+    }
+    75% {
+        transform: translateX(2px);
+    }
+}
+
+@keyframes fieldRotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes batSwing {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-30deg);
+    }
+    50% {
+        transform: rotate(45deg);
+    }
+    75% {
+        transform: rotate(-15deg);
+    }
+}
+
+@keyframes floatDot {
+    0%, 100% {
+        transform: translateY(0px) scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateY(-20px) scale(1.2);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceEmoji {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-15px) rotate(10deg);
+    }
+    50% {
+        transform: translateY(-30px) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-10px) rotate(-10deg);
+    }
+}
+
+@keyframes spinEmoji {
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.3);
+    }
+    to {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes wobbleEmoji {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-15deg) scale(1.1);
+    }
+    50% {
+        transform: rotate(15deg) scale(0.9);
+    }
+    75% {
+        transform: rotate(-10deg) scale(1.1);
+    }
+}
+
+@keyframes danceEmoji {
+    0%, 100% {
+        transform: translateX(0px) translateY(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateX(-10px) translateY(-5px) rotate(-20deg);
+    }
+    50% {
+        transform: translateX(10px) translateY(-10px) rotate(20deg);
+    }
+    75% {
+        transform: translateX(-5px) translateY(-3px) rotate(-10deg);
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hamburger {
@@ -1097,6 +1606,23 @@ section {
     
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .volunteering-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .volunteering-card {
+        padding: 2rem;
+    }
+    
+    .passion-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .cricket-animation {
+        height: 200px;
     }
 }
 
